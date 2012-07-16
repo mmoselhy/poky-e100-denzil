@@ -1,0 +1,15 @@
+DESCRIPTION = "Base software to install GNU Radio"
+LICENSE = "MIT"
+
+PR = "r1"
+inherit task
+
+RDEPENDS_${PN} = " \
+  task-usrp-embedded \
+  task-base-extended \
+  ortp-dev \
+  asterisk \
+"
+
+
+
