@@ -1,0 +1,28 @@
+This README file for explaining how to use this repo to build openembedded for new poky builder - denzil. on Ettus-e100.
+
+
+Some changes have been made and commited on the original branch from yocto project to make a successful build.
+
+This was tried on Fedora 16 OS.
+
+
+>>git https://github.com/mmoselhy/poky-e100-denzil.git
+>> cd poky-e100-denzil
+>>source oe-init-build-env
+
+You'll be directed to the build directoy.
+check poky-e100-denzil/build.sample/conf/ for local.conf and bblayers.conf for guidance.
+
+for bblayer.conf
+----------------
+- Add the layers with the correct path to your build/conf/bblayer.conf like build.sample/conf/bblayer.conf
+
+- Change some configurations in build/conf/local.conf like that of build.sample/conf/local.conf
+
+
+then from the build directory - for X11 image
+
+>>bitbake core-image-core
+
+Refer to poky-e100-denzil/documentation/README-poky-e100-denzil-gnuradio for gnuradio ipk generation for e100
+

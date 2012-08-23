@@ -1,0 +1,39 @@
+To igenerate ipk for gnuradio for e100. There're some modifications that will be done during the build process. follow these steps.
+--------------------------------------------------------------------------------------------------------------------------------------
+
+IN the poky home directory poky-e100-denzil 
+>> source oe-init-build-env
+>> bitbake task-gnuradio
+
+
+
+
+
+=================
+Errors and Fixes:
+=================
+Error:
+==========
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+for error of gnuradio-3.5.3 do_compile undefined reference to pthread_sigmask 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fix:
+open poky-e100-denzil/build/tmp-eglibc/work/armv7a-angstrom-linux-gnueabi/gnuradio-3.5.3-r0/git/build/gruel/src/lib/CMakeFiles/gruel.dir/link.txt
+
+add "-lrt -lpthread"  after this option "--sysroot=/media/OE/poky-e100-denzil/build/tmp-eglibc/sysroots/usrp-e1xx"
+==========
+
+
+
+Error:
+=========
+any error related to the qwt package for undefined reference for gettime 
+
+
+Fix:  add "-lrt" to their makeFile to the existing libs in "LIBS" variable
+=========
+
+
+
+
