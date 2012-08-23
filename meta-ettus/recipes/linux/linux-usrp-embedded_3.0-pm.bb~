@@ -19,7 +19,6 @@ SRC_URI = "git://www.sakoman.com/git/linux-omap-2.6.git;branch=omap-3.0-pm;proto
 	file://0005-usrp_e-Modify-overo-board-file-to-setup-hardware-for.patch \
 	file://834c2a69c87ee7211932f8ec5102a472828abcb1.patch \
 	file://0001-mmc-Max-dto-to-14-for-testing.patch \
-	file://195bcbf5078d74c8e00d68f04eb8695196fb31e8.patch \
 	file://defconfig \
 	"
 
