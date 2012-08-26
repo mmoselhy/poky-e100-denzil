@@ -13,7 +13,7 @@ do_configure () {
    ./configure --with-uhd CFLAGS="-march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -O3" CXXFLAGS="-march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp -O3" --host=${TARGET_SYS} 
 }
 do_compile () {
-   make
+   oe_runmake
 }
 do_install () {
    DESTDIR=${D} oe_runmake install
